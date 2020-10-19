@@ -2,8 +2,8 @@
   
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json", 
   "title": "Happiness Score 2019", 
-  "width": 800,
-  "height": 600, 
+  "width": 900,
+  "height": 500, 
   "data": { 
     
     "url": "https://raw.githubusercontent.com/IshanNandal/FIT3179/master/ne_110m_admin_0_countries.topojson",
