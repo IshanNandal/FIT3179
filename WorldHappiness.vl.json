@@ -14,13 +14,13 @@
       "lookup": "properties.NAME",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/KaneSec/vega_lite/main/3_choropleth_map/data/covid_10_10_2020.csv"
+          "url": "https://github.com/IshanNandal/FIT3179/blob/master/2019.csv"
         },
-        "key": "Country",
-        "fields": ["Active"]
+        "key": "Country or Region",
+        "fields": ["Score"]
       }
     },
-    {"calculate": "datum.Active + 0.1", "as": "Active Cases"}
+    {"calculate": "datum.Active + 0.1", "as": "Score"}
   ],
   "projection": {
     "type": "equirectangular"
