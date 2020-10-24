@@ -1,0 +1,100 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 650,
+  "height": 500,
+  "title": "GDP per capita vs. Happiness score of countries",
+  "data": {
+    "url": "https://raw.githubusercontent.com/IshanNandal/FIT3179/master/2019.csv"
+  },
+
+  "encoding": {
+    "x": {
+      "field": "GDP per capita",
+      "type": "quantitative",
+      "axis": {"tickCount": 6},
+      "scale": {"domain": [0, 1.8]}
+    },
+    "y": {
+      "field": "Score",
+      "type": "quantitative",
+      "title": "Happiness Score (out of 10)",
+      "axis": {"tickCount": 7},
+      "scale": {"domain": [2, 8]}
+    }
+  },
+  "layer": [
+    {
+      "selection": {
+        "continent_highlight": {
+          "type": "multi",
+          "fields": ["Country or region"],
+          "bind": "legend"
+        }
+      },
+      "mark": "circle",
+      "encoding": {
+        "size": {
+          "field": "Social support",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [1.1, 1.53],
+            "range": [100, 210, 450]
+          }
+        },
+
+        "color": {
+          "field": "Healthy life expectancy",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [0.1, 0.5, 0.85, 1],
+            "range": [
+              "#f0f9e8",
+              "#bae4bc",
+              "#7bccc4",
+              "#43a2ca",
+              "#0868ac"
+            ]
+          }
+        },
+
+        "opacity": {
+          "condition": {"selection": "continent_highlight", "value": 0.6},
+          "value": 0.2
+        },
+
+        "tooltip": [
+          {"field": "Country or region", "type": "nominal"},
+          {"field": "Score", "type": "quantitative", "format": ","},
+          {"field": "GDP per capita", "type": "quantitative", "format": ","},
+          {"field": "Social support", "type": "quantitative", "format": ","},
+          {"field": "Healthy life expectancy", "type": "quantitative", "format": ","}
+        ]
+      }
+    },
+
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -12,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+
+      "encoding": {
+        "text": {"field": "Country or region", "type": "nominal"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+            "test": "datum['Country or region'] == 'Botswana' || datum['Country or region'] == 'Tajikistan' || datum['Country or region'] == 'Qatar' || datum['Country or region'] == 'Finland' || datum['Country or region'] == 'South Sudan' || datum['Country or region'] == 'Costa Rica' ||  datum['Country or region'] == 'Hong Kong'",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
+    }
+  ]
+}
