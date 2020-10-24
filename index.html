@@ -12,15 +12,29 @@
   
 </head>
 <body>
+  
+  <h1>World Happiness Report</h1>
 
-<div id="Happiness_score_choropleth_map"></div>
+  <h2>Happiness Score Choropleth map</h2>
+  <div id="Happiness_score_choropleth_map"></div>
+  
+  <h2>GDP per capita vs. Happiness Score scatter plot</h2>
+  <div id="GDPvs_Happiness_score_scatter_plot"></div>
 
-<script type="text/javascript">
-  var spec = "WorldHappiness.vl.json";
-  vegaEmbed('#Happiness_score_choropleth_map', spec).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-</script>
+  <script type="text/javascript">
+    var vis1 = "WorldHappiness.vl.json";
+
+    vegaEmbed('#Happiness_score_choropleth_map', vis1).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    
+    var vis2 = "GDPvsHappiness.vl.json";
+    
+    vegaEmbed('GDPvs_Happiness_score_scatter_plot', vis2).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    
+  </script>
 </body>
 </html>
 
