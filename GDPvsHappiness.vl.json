@@ -5,7 +5,7 @@
   "title": "GDP per capita vs. Happiness score of countries",
   "data": {
     "url": "https://raw.githubusercontent.com/IshanNandal/FIT3179/master/2019.csv"
-  },
+    },
 
   "params": [
     {
