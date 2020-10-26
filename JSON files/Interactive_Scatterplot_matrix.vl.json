@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "repeat": {
+    "row": ["Life Expectancy", "GDP per Capita", "Social support"],
+    "column": ["Social support", "GDP per Capita", "Life Expectancy"]
+  },
+  "spec": {
+    "data": {"url": "https://raw.githubusercontent.com/IshanNandal/FIT3179/master/Data/Merged.csv"},
+    "mark": "point",
+    "selection": {
+      "brush": {
+        "type": "interval",
+        "resolve": "union",
+        "on": "[mousedown[event.shiftKey], window:mouseup] > window:mousemove!",
+        "translate": "[mousedown[event.shiftKey], window:mouseup] > window:mousemove!",
+        "zoom": "wheel![event.shiftKey]"
+      },
+      "grid": {
+        "type": "interval",
+        "resolve": "global",
+        "bind": "scales",
+        "translate": "[mousedown[!event.shiftKey], window:mouseup] > window:mousemove!",
+        "zoom": "wheel![!event.shiftKey]"
+      }
+    },
+    "encoding": {
+      "x": {"field": {"repeat": "column"}, "type": "quantitative"},
+      "y": {
+        "field": {"repeat": "row"},
+        "type": "quantitative",
+        "axis": {"minExtent": 30}
+      },
+      "color": {
+        "condition": {
+          "selection": "brush",
+          "field": "Happiness Score",
+          "type": "quantitative"
+        },
+        "value": "grey"
+      }
+    }
+  }
+}
