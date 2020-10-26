@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/IshanNandal/FIT3179/master/Data/Merged.csv"
+
+  },
+
+  "repeat": {"column": ["Happiness Score", "GDP per Capita", "Social support"]},
+  "spec": {
+    "layer": [{
+      "selection": {
+        "brush": {"type": "interval", "encodings": ["x"]}
+      },
+      "mark": "bar",
+      "encoding": {
+        "x": {
+          "field": {"repeat": "column"},
+          "bin": {"maxbins": 20}
+        },
+        "y": {"aggregate": "count"},
+        "color": {"value": "#ddd"}
+      }
+    }, {
+      "transform": [{"filter": {"selection": "brush"}}],
+      "mark": "bar",
+      "encoding": {
+        "x": {
+          "field": {"repeat": "column"},
+          "bin": {"maxbins": 20}
+        },
+        "y": {"aggregate": "count"}
+      }
+    }]
+  }
+}
