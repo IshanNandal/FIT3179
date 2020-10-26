@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {"url": "https://raw.githubusercontent.com/IshanNandal/FIT3179/master/Data/Merged.csv"},
+  "vconcat": [{
+    "width": 650,
+    "height": 350,
+    "mark": "area",
+    "encoding": {
+      "x": {
+        "field": "GDP per Capita",
+        "type": "quantitative",
+        "scale": {"domain": {"selection": "brush"}}
+      },
+      "y": {"field": "Life Expectancy", "type": "quantitative"}
+    }
+  }, {
+    "width": 650,
+    "height": 100,
+    "mark": "area",
+    "selection": {
+      "brush": {"type": "interval", "encodings": ["x"]}
+    },
+    "encoding": {
+      "x": {
+        "field": "GDP per Capita",
+        "type": "quantitative"
+      },
+      "y": {
+        "field": "Life Expectancy",
+        "type": "quantitative",
+        "axis": {"tickCount": 3, "grid": false}
+      }
+    }
+  }]
+}
