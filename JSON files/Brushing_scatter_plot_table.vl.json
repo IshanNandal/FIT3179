@@ -1,0 +1,65 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "Drag a rectangular brush to show (first 20) selected points in a table.",
+  
+  "data": {"url": "https://raw.githubusercontent.com/IshanNandal/FIT3179/master/Data/Merged.csv"},
+  
+  "transform": [{
+    "window": [{"op": "row_number", "as": "row_number"}]
+  }],
+  
+  "hconcat": [{
+    "selection": {
+      "brush": {
+        "type": "interval"
+      }
+    },
+    
+    "mark": "point",
+    
+    "encoding": {
+      "x": {"field": "GDP per Capita", "type": "quantitative",
+          "scale": {"domain": [0, 1.8]}},
+      "y": {"field": "Happiness Score", "type": "quantitative"},
+      "color": {
+        "condition": {"selection": "brush", "field": "Life Expectancy", "type": "quantitative"},
+        "value": "grey"
+      }
+    }
+  }, {
+    "transform": [
+      {"filter": {"selection": "brush"}},
+      {"window": [{"op": "rank", "as": "rank"}]},
+      {"filter": {"field": "rank", "lt": 20}}
+    ],
+    "hconcat": [{
+      "width": 50,
+      "title": "GDP per Capita",
+      "mark": "text",
+      "encoding": {
+        "text": {
+          "field": "GDP per Capita", 
+          "type": "quantitative"
+        },
+        "y": {"field": "row_number", "type": "ordinal", "axis": null}
+      }
+    }, {
+      "width": 50,
+      "title": "Happiness Score",
+      "mark": "text",
+      "encoding": {
+        "text": {"field": "Happiness Score", "type": "quantitative"},
+        "y": {"field": "row_number", "type": "ordinal", "axis": null}
+      }
+    }, {
+      "width": 50,
+      "title": "Government Trust",
+      "mark": "text",
+      "encoding": {
+        "text": {"field": "Government Trust", "type": "quantitative"},
+        "y": {"field": "row_number", "type": "ordinal", "axis": null}
+      }
+    }]
+  }],
+  "resolve": {"legend": {"color": "independent"}}
+}
