@@ -6,7 +6,7 @@
   
   "data": {"url": "https://raw.githubusercontent.com/IshanNandal/FIT3179/master/Data/Merged.csv"},
   
-  "width": 700,
+  "width": 650,
   "height": 450,
   
   "layer": [
@@ -18,19 +18,37 @@
       "mark": {
         "type": "text",
         "fontSize": 100,
-        "x": 420,
+        "x": 330,
         "y": 250,
-        "opacity": 0.06
+        "opacity": 0.08
       },
       "encoding": {"text": {"field": "Year"}}
     },
     {
       
+      "transform": [
+        {
+          "lookup": "Country",
+          "from": {
+            "key": "id",
+            "fields": ["name"],
+            "data": {
+              "values": [
+                {"id": "Norway", "name": "Norway"},
+                {"id": "Finland", "name": "Finland"},
+                {"id": "Sweden", "name": "Sweden"},
+                {"id": "Australia", "name": "Australia"}
+              ]
+            }
+          }
+        }
+      ],
+
       "encoding": {
         "x": {
           "field": "GDP per Capita",
           "type": "quantitative",
-          "scale": {"domain": [0, 1.8]},
+          "scale": {"domain": [0, 2.1]},
           "axis": {"tickCount": 5, "title": "GDP per Capita"}
         },
         "y": {
@@ -126,7 +144,16 @@
                 "fontSize": 12,
                 "color": "gray"
               },
-              "encoding": {"text": {"field": "Year"}}
+              "encoding": {"text": {"field": "Year"},
+              "opacity": {
+          "condition": {
+            "test": "datum['Year'] == Year",
+            "value": 1
+          },
+          "value": 0
+        }
+
+}
             },
             {"mark": {"type": "circle", "color": "gray"}}
           ]
