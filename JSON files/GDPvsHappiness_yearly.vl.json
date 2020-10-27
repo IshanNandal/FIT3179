@@ -1,17 +1,20 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title": "Happiness Score vs. GDP per Capita (2015-2019)",
+  
   "description": "An interactive scatter plot of global happiness statistics by country and year.",
+  
   "data": {"url": "https://raw.githubusercontent.com/IshanNandal/FIT3179/master/Data/Merged.csv"},
+  
   "width": 700,
-  "height": 500,
+  "height": 450,
+  
   "layer": [
-    {
+    {     
       "transform": [
-        {
-          "filter": {"selection": "Year"}
-        }
+        {"filter": {"selection": "Year"}}
       ],
+
       "mark": {
         "type": "text",
         "fontSize": 100,
@@ -59,6 +62,7 @@
             }
           }
         },
+        
         {
           "selection": {
             "Year": {
@@ -79,18 +83,13 @@
               "on": "mouseover",
               "empty": "none"
             },
+            
             "clicked": {"type": "multi", "fields": ["Country"], "empty": "none"}
           },
-          
           "transform": [{"filter": {"selection": "Year"}}],
-          
-          "mark": {
-            "type": "circle",
-            "size": 100,
-            "opacity": 0.9
-          }
-
+          "mark": {"type": "circle", "size": 100, "opacity": 0.9}
         },
+        
         {
           "transform": [
             {
@@ -102,6 +101,7 @@
               }
             }
           ],
+
           "mark": {
             "type": "text",
             "yOffset": -12,
@@ -113,10 +113,11 @@
           }
         },
         {
+
           "transform": [
-            {"filter": {"selection": "hovered"}},
             {"filter": {"not": {"selection": "Year"}}}
           ],
+
           "layer": [
             {
               "mark": {
