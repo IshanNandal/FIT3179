@@ -56,7 +56,8 @@
       "encoding": {
         "text": {
           "field": "GDP per Capita", 
-          "type": "quantitative"
+          "type": "quantitative",
+          "format": ".3f"
         },
         "y": {"field": "row_number", "type": "ordinal", "axis": null}
       }
@@ -65,7 +66,8 @@
       "title": "Happiness Score",
       "mark": "text",
       "encoding": {
-        "text": {"field": "Happiness Score", "type": "quantitative"},
+        "text": {"field": "Happiness Score", "type": "quantitative",
+          "format": ".3f"},
         "y": {"field": "row_number", "type": "ordinal", "axis": null}
       }
     }, {
@@ -73,7 +75,8 @@
       "title": "Government Trust",
       "mark": "text",
       "encoding": {
-        "text": {"field": "Government Trust", "type": "quantitative"},
+        "text": {"field": "Government Trust", "type": "quantitative",
+          "format": ".3f"},
         "y": {"field": "row_number", "type": "ordinal", "axis": null}
       }
     }]
