@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {"url": "https://raw.githubusercontent.com/IshanNandal/FIT3179/master/Data/Merged.csv"},
+  "title": "Happiness Score Multi-Series Chart",
+
+  "width": 650,
+  "height": 450,
+  
+  "encoding": {
+    
+    "x": {
+      "timeUnit": "year", "field": "Year",
+      "axis": {"tickCount": 5}
+    },
+    
+    "tooltip": [
+      {"timeUnit": "year", "field": "Year"},
+      {"field": "Country"},
+      {"field": "GDP per Capita", "type": "quantitative"},
+      {"field": "Social support", "type": "quantitative"}
+    ]
+  
+  },
+  
+  "layer": [
+  {
+    "mark": {"type": "point", "color": "red"},
+    "encoding": {
+      "y": {
+        "field": "Happiness Score", "type": "quantitative",
+        "scale": {"domain": [2.5, 8]},
+        "axis": {"tickCount": 5}
+      }
+    }
+  }, 
+  
+  {
+    "mark": "text",
+    "selection": {
+      "hover": {"type": "single", "on": "mouseover", "empty": "none"}
+    },
+    "encoding": {
+      "color": {
+        "condition":{
+          "selection": {"not": "hover"}, "value": "transparent"
+        }
+      }
+    }
+  }],
+  "config": {"axisY": {"minExtent": 30}}
+}
