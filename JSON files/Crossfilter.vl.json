@@ -8,6 +8,9 @@
   "repeat": {"column": ["Happiness Score", "GDP per Capita", "Social support"]},
   "spec": {
     "layer": [{
+
+        "width": 220,
+        "height": 470,
       "selection": {
         "brush": {"type": "interval", "encodings": ["x"]}
       },
