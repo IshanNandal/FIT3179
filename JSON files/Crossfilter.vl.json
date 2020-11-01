@@ -10,7 +10,7 @@
     "layer": [{
 
         "width": "container",
-        "height": 470,
+        "height": 300,
       "selection": {
         "brush": {"type": "interval", "encodings": ["x"]}
       },
