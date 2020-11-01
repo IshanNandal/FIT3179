@@ -4,22 +4,24 @@
   
   "data": {"url": "https://raw.githubusercontent.com/IshanNandal/FIT3179/master/Data/Merged.csv"},
   
-  "width": "container",
-    "height": 300,
-  
   "transform": [{
     "window": [
       {"op": "row_number", "as": "row_number"}
     ]
   }],
   
-  "hconcat": [{
-    "selection": {
+  "hconcat": [
+    {
+      "selection": {
       "brush": {
         "type": "interval"
       }
     },
     
+      
+    "width": "container",
+    "height": 300,
+      
     "mark": "point",
 
     "encoding": {
@@ -49,7 +51,8 @@
       {"window": [{"op": "rank", "as": "rank"}]},
       {"filter": {"field": "rank", "lt": 20}}
     ],
-    "hconcat": [{
+    "hconcat": [
+      {
       "width": 50,
       "title": "GDP per Capita",
       "mark": "text",
@@ -61,25 +64,8 @@
         },
         "y": {"field": "row_number", "type": "ordinal", "axis": null}
       }
-    }, {
-      "width": 50,
-      "title": "Happiness Score",
-      "mark": "text",
-      "encoding": {
-        "text": {"field": "Happiness Score", "type": "quantitative",
-          "format": ".3f"},
-        "y": {"field": "row_number", "type": "ordinal", "axis": null}
-      }
-    }, {
-      "width": 50,
-      "title": "Government Trust",
-      "mark": "text",
-      "encoding": {
-        "text": {"field": "Government Trust", "type": "quantitative",
-          "format": ".3f"},
-        "y": {"field": "row_number", "type": "ordinal", "axis": null}
-      }
-    }]
+    } 
+    ]
   }],
   "resolve": {"legend": {"color": "independent"}}
 }
