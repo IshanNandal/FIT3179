@@ -3,7 +3,7 @@
   
   "repeat": {
     "row": ["Life Expectancy", "GDP per Capita", "Generosity"],
-    "column": ["Government Trust", "Freedom to make life choices", "Social support"]
+    "column": ["Happiness Score", "Government Trust", "Social support"]
   },
   
   "spec": {
