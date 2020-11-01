@@ -9,7 +9,7 @@
   "spec": {
     "layer": [{
 
-        "width": 220,
+        "width": "container",
         "height": 470,
       "selection": {
         "brush": {"type": "interval", "encodings": ["x"]}
