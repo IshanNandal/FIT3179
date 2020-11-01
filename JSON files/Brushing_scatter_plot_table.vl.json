@@ -27,20 +27,20 @@
     "encoding": {
       
       "x": {
-        "field": "GDP per Capita", 
+        "field": "Social support", 
         "type": "quantitative",
         "scale": {"domain": [0, 2.2]}
       },
       
       "y": {
-        "field": "Happiness Score", 
+        "field": "Life Expectancy", 
         "type": "quantitative",
         "scale": {"domain": [2.5, 8]}},
 
       "color": {
         "condition": {
           "selection": "brush", 
-          "field": "Life Expectancy", 
+          "field": "Generosity", 
           "type": "quantitative"},
         "value": "grey"
       }
@@ -53,12 +53,12 @@
     ],
     "hconcat": [
       {
-      "width": 50,
-      "title": "GDP per Capita",
+      "width": "container",
+      "title": "Happiness Score",
       "mark": "text",
       "encoding": {
         "text": {
-          "field": "GDP per Capita", 
+          "field": "Happiness Score", 
           "type": "quantitative",
           "format": ".3f"
         },
