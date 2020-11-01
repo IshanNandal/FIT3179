@@ -2,8 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   
   "repeat": {
-    "row": ["Life Expectancy", "GDP per Capita", "Generosity"],
-    "column": ["Government Trust", "Freedom to make life choices", "Social support"]
+    "row": ["Life Expectancy", "GDP per Capita"],
+    "column": ["Government Trust", "Social support"]
   },
   
   "spec": {
