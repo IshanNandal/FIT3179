@@ -1,6 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": "container",
   
   "repeat": {
     "row": ["Life Expectancy", "GDP per Capita", "Generosity"],
@@ -10,6 +9,7 @@
   "spec": {
     "data": {"url": "https://raw.githubusercontent.com/IshanNandal/FIT3179/master/Data/Merged.csv"},
     "mark": "point",
+    "width": "container",
     
     "selection": {
       "brush": {
@@ -30,7 +30,11 @@
     },
     
     "encoding": {
-      "x": {"field": {"repeat": "column"}, "type": "quantitative"},
+      "x": {
+        "field": {"repeat": "column"}, 
+        "type": "quantitative"
+      },
+      
       "y": {
         "field": {"repeat": "row"},
         "type": "quantitative",
@@ -42,9 +46,9 @@
           "selection": "brush",
           "field": "Happiness Score",
           "type": "quantitative"
-        },
+      },
         
-        "value": "grey"
+      "value": "grey"
       }
     }
   }
