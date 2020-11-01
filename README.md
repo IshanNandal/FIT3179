@@ -2,3 +2,5 @@
 ## Data Visualization
 
 Visualizing Global Happiness trends alongside GDP per Capita, Life Expectancy, Government Trust, and other interesting factors
+
+Access the visualisation at https://ishannandal.github.io/FIT3179/
