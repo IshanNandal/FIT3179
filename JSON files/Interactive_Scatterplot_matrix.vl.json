@@ -9,7 +9,7 @@
   "spec": {
     "data": {"url": "https://raw.githubusercontent.com/IshanNandal/FIT3179/master/Data/Merged.csv"},
     "mark": "point",
-    "width": 190,
+    "width": 200,
     
     "selection": {
       "brush": {
@@ -41,6 +41,7 @@
         "condition": {
           "selection": "brush",
           "field": "Happiness Score",
+          "title": "Happiness",
           "type": "quantitative"
         },
         
