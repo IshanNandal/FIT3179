@@ -6,8 +6,13 @@
   "width": "container",
   
   "transform": [{
-      "bin": true, "field": "Happiness Score", "as": "happiness_score"
-    }, {
+      "bin": {
+        "binned": true,
+        "step": 0.5
+      }, 
+      "field": "Happiness Score", "as": "happiness_score"
+    }, 
+      {
       "aggregate": [{"op": "count", "as": "Count"}],
       "groupby": ["happiness_score", "happiness_score_end"]
     }, {
