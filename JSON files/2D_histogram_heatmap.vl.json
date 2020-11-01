@@ -1,0 +1,46 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {"url": "https://raw.githubusercontent.com/IshanNandal/FIT3179/master/Data/Merged.csv"},
+  
+  "transform": [{
+    "filter": {"and": [
+      {"field": "Freedom to make life choices", "valid": true},
+      {"field": "Government Trust", "valid": true}
+    ]}
+  }],
+  
+  "mark": "rect",
+  "width": 300,
+  "height": 200,
+  "encoding": {
+    
+    "x": {
+      "bin": {"maxbins":30},
+      "field": "Freedom to make life choices",
+      "title": "Freedom to make life choices",
+      "type": "quantitative"
+    },
+    
+    "y": {
+      "bin": {"maxbins": 20},
+      "field": "Government Trust",
+      "title": "Government Trust",
+      "type": "quantitative"
+    },
+    
+    "color": {
+      "aggregate": "count",
+      "type": "quantitative",
+      "title": "Number of countries",
+      "scale": {
+        "type": "threshold",
+        "domain": [5, 10, 20, 30]
+      }
+    }
+  },
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    }
+  }
+}
