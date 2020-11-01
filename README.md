@@ -5,4 +5,4 @@ Visualizing Global Happiness trends alongside GDP per Capita, Life Expectancy, G
 
 Access the visualisation at https://ishannandal.github.io/FIT3179/
 
-#### <u>Note</u>: Only 8 visualizations were deemed suitable to be displayed on the webpage. Check "JSON files" for more. 
+###### <u>Note</u>: Only 8 visualizations were deemed suitable to be displayed on the webpage. Check https://github.com/IshanNandal/FIT3179/tree/master/JSON%20files for more. 
