@@ -4,6 +4,9 @@
   
   "data": {"url": "https://raw.githubusercontent.com/IshanNandal/FIT3179/master/Data/Merged.csv"},
   
+  "width": "container",
+    "height": 450,
+  
   "transform": [{
     "window": [
       {"op": "row_number", "as": "row_number"}
@@ -16,10 +19,7 @@
         "type": "interval"
       }
     },
-
-    "width": "container",
-    "height": 450,
-
+    
     "mark": "point",
 
     "encoding": {
