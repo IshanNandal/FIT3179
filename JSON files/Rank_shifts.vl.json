@@ -3,7 +3,7 @@
   "description": "Multi-series line chart with labels and interactive highlight on hover.  We also set the selection's initial value to provide a better screenshot",
   "title": "Happiness ranks of the happiest countries over the years",
 
-  "width": 650,
+  "width": "container",
   "height": 450,
   "data": {"url": "https://raw.githubusercontent.com/IshanNandal/FIT3179/master/Data/Merged.csv"},
 
