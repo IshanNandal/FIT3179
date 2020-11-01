@@ -9,28 +9,32 @@
   "spec": {
     "layer": [{
 
-        "width": "container",
-        "height": 300,
+      "width": "container",
+      
       "selection": {
         "brush": {"type": "interval", "encodings": ["x"]}
       },
+      
       "mark": "bar",
       "encoding": {
         "x": {
           "field": {"repeat": "column"},
-          "bin": {"maxbins": 20}
+          "bin": {"maxbins": 5}
         },
         "y": {"aggregate": "count"},
         "color": {"value": "#ddd"}
       }
-    }, {
+    }, 
+      {
       "transform": [{"filter": {"selection": "brush"}}],
       "mark": "bar",
       "encoding": {
+        
         "x": {
           "field": {"repeat": "column"},
-          "bin": {"maxbins": 20}
+          "bin": {"maxbins": 5}
         },
+        
         "y": {"aggregate": "count"}
       }
     }]
