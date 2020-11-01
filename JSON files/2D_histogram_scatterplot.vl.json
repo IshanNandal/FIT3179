@@ -2,17 +2,21 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "data": {"url": "https://raw.githubusercontent.com/IshanNandal/FIT3179/master/Data/Merged.csv"},
   "mark": "circle",
+  "width": "container",
+  
   "encoding": {
     "x": {
       "bin": {"maxbins": 10},
       "field": "Freedom to make life choices",
       "title": "Freedom to make life choices"
     },
+    
     "y": {
       "bin": {"maxbins": 10},
       "field": "Government Trust",
       "title": "Government Trust"
     },
+    
     "size": {"aggregate": "count"}
   }
 }
