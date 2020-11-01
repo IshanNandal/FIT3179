@@ -39,16 +39,6 @@
         "field": {"repeat": "row"},
         "type": "quantitative",
         "axis": {"minExtent": 30}
-      },
-      
-      "color": {
-        "condition": {
-          "selection": "brush",
-          "field": "Happiness Score",
-          "type": "quantitative"
-      },
-        
-      "value": "grey"
       }
     }
   }
