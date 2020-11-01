@@ -5,7 +5,7 @@
   "data": {"url": "https://raw.githubusercontent.com/IshanNandal/FIT3179/master/Data/Merged.csv"},
   
   "width": "container",
-    "height": 450,
+    "height": 300,
   
   "transform": [{
     "window": [
