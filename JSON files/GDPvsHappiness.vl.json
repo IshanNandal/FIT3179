@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": "container",
-  "height": 450,
   "title": "GDP per capita vs. Happiness score of countries",
+  
   "data": {
     "url": "https://raw.githubusercontent.com/IshanNandal/FIT3179/master/Data/2019.csv"
   },
@@ -16,7 +16,7 @@
         "min": 0,
         "max": 1.2,
         "step": 0.1,
-        "name": "Min. Healthy life expectancy: "
+        "name": "Min. life expectancy:"
       }
     }
   ],
@@ -63,6 +63,7 @@
 
         "color": {
           "field": "Healthy life expectancy",
+          "title": "Life Expectancy",
           "type": "quantitative",
           "scale": {
             "type": "threshold",
