@@ -19,7 +19,7 @@
     },
     
       
-    "width": "container",
+    "width": 300,
     "height": 300,
       
     "mark": "point",
@@ -29,18 +29,18 @@
       "x": {
         "field": "Social support", 
         "type": "quantitative",
-        "scale": {"domain": [0, 2.2]}
+        "scale": {"domain": [0, 1.7]}
       },
       
       "y": {
-        "field": "Life Expectancy", 
+        "field": "Happiness Score", 
         "type": "quantitative",
         "scale": {"domain": [2.5, 8]}},
 
       "color": {
         "condition": {
           "selection": "brush", 
-          "field": "Generosity", 
+          "field": "Life Expectancy", 
           "type": "quantitative"},
         "value": "grey"
       }
@@ -49,16 +49,16 @@
     "transform": [
       {"filter": {"selection": "brush"}},
       {"window": [{"op": "rank", "as": "rank"}]},
-      {"filter": {"field": "rank", "lt": 20}}
+      {"filter": {"field": "rank", "lt": 15}}
     ],
     "hconcat": [
       {
-      "width": "container",
-      "title": "Happiness Score",
+      "width": 40,
+      "title": "Generosity",
       "mark": "text",
       "encoding": {
         "text": {
-          "field": "Happiness Score", 
+          "field": "GDP per Capita", 
           "type": "quantitative",
           "format": ".3f"
         },
@@ -69,3 +69,4 @@
   }],
   "resolve": {"legend": {"color": "independent"}}
 }
+
