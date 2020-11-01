@@ -57,7 +57,7 @@
           "scale": {
             "type": "threshold",
             "domain": [1.1, 1.53],
-            "range": [90, 200, 450]
+            "range": [15, 35, 70]
           }
         },
 
@@ -95,7 +95,7 @@
         "align": "right",
         "baseline": "middle",
         "dx": -12,
-        "fontSize": 11.5,
+        "fontSize": 9.5,
         "fontStyle": "italic"
       },
 
@@ -104,7 +104,7 @@
         "color": {"value": "black"},
         "opacity": {
           "condition": {
-            "test": "datum['Country or region'] == 'Botswana' || datum['Country or region'] == 'Tajikistan' || datum['Country or region'] == 'Qatar' || datum['Country or region'] == 'Finland' || datum['Country or region'] == 'South Sudan' || datum['Country or region'] == 'Costa Rica' ||  datum['Country or region'] == 'Hong Kong'",
+            "test": "datum['Country or region'] == 'Botswana' || datum['Country or region'] == 'Tajikistan' || datum['Country or region'] == 'Qatar' || datum['Country or region'] == 'Finland' || datum['Country or region'] == 'Tanzania' || datum['Country or region'] == 'Costa Rica' ||  datum['Country or region'] == 'Hong Kong'",
             "value": 1
           },
           "value": 0
