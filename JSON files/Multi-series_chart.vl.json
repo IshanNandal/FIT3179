@@ -3,7 +3,7 @@
   "data": {"url": "https://raw.githubusercontent.com/IshanNandal/FIT3179/master/Data/Merged.csv"},
   "title": "Happiness Score Multi-Series Chart",
 
-  "width": 650,
+  "width": "container",
   "height": 450,
   
   "encoding": {
