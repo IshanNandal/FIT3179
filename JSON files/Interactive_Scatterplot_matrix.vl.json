@@ -9,7 +9,7 @@
   "spec": {
     "data": {"url": "https://raw.githubusercontent.com/IshanNandal/FIT3179/master/Data/Merged.csv"},
     "mark": "point",
-    "width": 200,
+    "width": 195,
     
     "selection": {
       "brush": {
