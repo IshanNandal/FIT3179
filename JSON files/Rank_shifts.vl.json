@@ -1,10 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "description": "Multi-series line chart with labels and interactive highlight on hover.  We also set the selection's initial value to provide a better screenshot",
-  "title": "Happiness ranks of the happiest countries over the years",
 
   "width": "container",
-  "height": 450,
   "data": {"url": "https://raw.githubusercontent.com/IshanNandal/FIT3179/master/Data/Merged.csv"},
 
   "transform": [{"filter": "datum.Country=='Switzerland' || datum.Country == 'Iceland' || datum.Country == 'Denmark' || datum.Country == 'Norway' || datum.Country == 'Canada' || datum.Country == 'Finland' || datum.Country == 'Netherlands' || datum.Country == 'Sweden' || datum.Country == 'New Zealand'"}],
@@ -14,12 +12,17 @@
       "field": "Year", 
       "type": "ordinal", 
       "title": "Year",
-      "axis": {"labelAngle": 0}
+      "axis": {
+        "labelAngle": 0
+      }
     },
     
     "y": {
       "field": "Happiness Rank", 
-      "type": "quantitative", 
+      "type": "quantitative",
+      "sort": "descending", 
+      "scale": {"domain": [1,10]},
+      "axis": {"tickCount": 10},
       "title": "Happiness Rank"
     },
     
@@ -48,7 +51,7 @@
         "on": "mouseover",
         "empty": "all",
         "fields": ["Country"],
-        "init": {"Country": "Switzerland"}
+        "init": {"Country": "Finland"}
       }
     },
     "mark": {"type": "line", "strokeWidth": 8, "stroke": "transparent"}
