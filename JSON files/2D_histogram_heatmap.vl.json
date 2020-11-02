@@ -4,8 +4,8 @@
   
   "transform": [{
     "filter": {"and": [
-      {"field": "Freedom to make life choices", "valid": true},
-      {"field": "Government Trust", "valid": true}
+      {"field": "Social support", "valid": true},
+      {"field": "Life Expectancy", "valid": true}
     ]}
   }],
   
@@ -15,15 +15,15 @@
     
     "x": {
       "bin": {"maxbins":30},
-      "field": "Freedom to make life choices",
-      "title": "Freedom to make life choices",
+      "field": "Social support",
+      "title": "Social support",
       "type": "quantitative"
     },
     
     "y": {
       "bin": {"maxbins": 20},
-      "field": "Government Trust",
-      "title": "Government Trust",
+      "field": "Life Expectancy",
+      "title": "Life Expectancy",
       "type": "quantitative"
     },
     
