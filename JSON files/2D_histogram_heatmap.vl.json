@@ -10,7 +10,7 @@
   }],
   
   "mark": "rect",
-  "width": "container,
+  "width": "container",
   "encoding": {
     
     "x": {
