@@ -17,8 +17,16 @@
     "tooltip": [
       {"timeUnit": "year", "field": "Year"},
       {"field": "Country"},
-      {"field": "Happiness Score", "type": "quantitative"},
-      {"field": "GDP per Capita", "type": "quantitative"}
+      {
+        "field": "Happiness Score", 
+        "type": "quantitative",
+        "format": ".2f"
+      },
+      {
+        "field": "GDP per Capita", 
+        "type": "quantitative",
+        "format": ".2f"
+      }
     ]
   
   },
