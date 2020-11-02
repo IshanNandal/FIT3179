@@ -10,8 +10,7 @@
   }],
   
   "mark": "rect",
-  "width": 300,
-  "height": 200,
+  "width": "container,
   "encoding": {
     
     "x": {
@@ -31,7 +30,7 @@
     "color": {
       "aggregate": "count",
       "type": "quantitative",
-      "title": "Number of countries",
+      "title": "Countries",
       "scale": {
         "type": "threshold",
         "domain": [5, 10, 20, 30]
