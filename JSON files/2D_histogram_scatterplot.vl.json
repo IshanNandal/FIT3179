@@ -17,6 +17,6 @@
       "title": "Government Trust"
     },
     
-    "size": {"aggregate": "count"}
+    "size": {"aggregate": "count", "title": "Countries"}
   }
 }
